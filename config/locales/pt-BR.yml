@@ -7,8 +7,11 @@ pt-BR:
     title: Leia na Web
     description: Disponibilize seu conteúdo na internet e no celular de forma simples e barata
     keywords: 'leitor, mobile, jornal, revista'
-  content:
+  labels:
     get_started: Adquira já
+    about: Sobre
+    services: Serviços
+    contact: Contato
   date:
     abbr_day_names:
     - Dom
