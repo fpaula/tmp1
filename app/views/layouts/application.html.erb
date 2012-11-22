@@ -24,6 +24,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="masthead">
+        <h3 class="muted"><%= translate('product.name')%></h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#"><%= translate('labels.services') %></a></li>
+                <li><a href="#"><%= translate('labels.about') %></a></li>
+                <li><a href="#"><%= translate('labels.contact') %></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

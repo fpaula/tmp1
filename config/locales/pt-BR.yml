@@ -3,12 +3,14 @@ pt-BR:
     name: Leia na Web
     slogan: Seu conteúdo impresso na Web
     description: Disponibilize seu conteúdo na internet e no celular de forma simples e barata
+    copy: Leia na Web 2012
   metadata:
     title: Leia na Web
     description: Disponibilize seu conteúdo na internet e no celular de forma simples e barata
     keywords: 'leitor, mobile, jornal, revista'
   labels:
     get_started: Adquira já
+    view_details: Mais detalhes
     about: Sobre
     services: Serviços
     contact: Contato
