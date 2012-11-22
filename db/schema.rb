@@ -11,12 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121113155453) do
+ActiveRecord::Schema.define(:version => 20121122133343) do
 
-  create_table "contact_us", :force => true do |t|
+  create_table "contacts", :force => true do |t|
     t.string   "name"
     t.string   "email"
+    t.string   "phone"
     t.string   "message"
+    t.boolean  "opt_in"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

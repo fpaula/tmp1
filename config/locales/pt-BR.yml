@@ -14,6 +14,8 @@ pt-BR:
     about: Sobre
     services: Serviços
     contact: Contato
+    opt_in: Desejo receber informações por e-mail
+    send: Enviar
   date:
     abbr_day_names:
     - Dom
@@ -143,7 +145,7 @@ pt-BR:
     select:
       prompt: Por favor selecione
     submit:
-      create: Criar %{model}
+      create: Enviar
       submit: Salvar %{model}
       update: Atualizar %{model}
   number:
@@ -218,5 +220,14 @@ pt-BR:
     errors:
       <<: *errors
   activerecord:
+    models:
+      contact: Contato
+    attributes:
+      contact:
+        name: Nome
+        email: E-mail
+        phone: Telefone
+        message: Mensagem
+        opt_in: Desejo receber e-mails sobre o produto
     errors:
       <<: *errors
