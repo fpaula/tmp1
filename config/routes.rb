@@ -1,6 +1,4 @@
 LeiaNaWeb::Application.routes.draw do
-  resources :contact_us
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
