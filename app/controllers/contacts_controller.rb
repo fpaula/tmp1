@@ -43,13 +43,8 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
 
     respond_to do |format|
-      if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
-        format.json { render json: @contact, status: :created, location: @contact }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
-      end
+      UserMailer.contact_us(@contact).deliver
+      format.html { redirect_to contact_us_path, notice: 'Seu contato foi recebido. Em breve responderemos sua mensagem. Obrigado!' }
     end
   end
 

@@ -1,34 +1,33 @@
-<%= form_for(@contact) do |f| %>
+<p id="notice"><%= notice %></p>
+<%= form_for(@contact, :html => { :class => "edit_post"}) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <ul>
       <% @contact.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <p class="text-error"><%= msg %></p>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'input-xxlarge' %>
   </div>
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => 'input-xxlarge' %>
   </div>
   <div class="field">
     <%= f.label :phone %>
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, :class => 'input-xxlarge' %>
   </div>
   <div class="field">
     <%= f.label :message %>
-    <%= f.text_field :message %>
+    <%= f.text_area :message, :class => 'input-xxlarge', :rows => 3 %>
   </div>
   <label class="checkbox">
     <%= f.check_box :opt_in %> <%= translate('labels.opt_in') %>
   </label>
-  <div class="actions">
+  <div class="form-actions">
     <%= f.submit translate('labels.send'), :class => 'btn btn-primary' %>
   </div>
 <% end %>
