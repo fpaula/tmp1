@@ -41,11 +41,9 @@ class ContactsController < ApplicationController
   # POST /contacts.json
   def create
     @contact = Contact.new(params[:contact])
-
-    respond_to do |format|
-      #UserMailer.contact_us(@contact).deliver
-      format.html { redirect_to contact_us_path, notice: 'Seu contato foi recebido. Em breve responderemos sua mensagem. Obrigado!' }
-    end
+    @contact.save
+    #UserMailer.contact_us(@contact).deliver
+    redirect_to contact_us_path, notice: 'Seu contato foi recebido. Em breve responderemos sua mensagem. Obrigado!'
   end
 
   # PUT /contacts/1
