@@ -1,3 +1,9 @@
 task :contacts => :environment do
-  puts Contact.all.inspect
+  puts '### INICIANDO PESQUISA ###'
+  c = Contact.all
+  c.each do |contact|
+    puts contact.inspect
+    puts '=' * 50
+  end
+  puts "### TOTAL: #{c.count} ###"
 end
