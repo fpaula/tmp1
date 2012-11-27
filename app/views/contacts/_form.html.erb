@@ -1,7 +1,11 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+<% end %>
 <%= form_for(@contact, :html => { :class => "edit_post"}) do |f| %>
   <% if @contact.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-error">
       <% @contact.errors.full_messages.each do |msg| %>
         <p class="text-error"><%= msg %></p>
       <% end %>
@@ -25,7 +29,7 @@
     <%= f.text_area :message, :class => 'input-xxlarge', :rows => 3 %>
   </div>
   <label class="checkbox">
-    <%= f.check_box :opt_in %> <%= translate('labels.opt_in') %>
+    <%= f.check_box :opt_in, :checked => true %> <%= translate('labels.opt_in') %>
   </label>
   <div class="form-actions">
     <%= f.submit translate('labels.send'), :class => 'btn btn-primary' %>

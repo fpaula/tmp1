@@ -1,6 +1,4 @@
 LeiaNaWeb::Application.routes.draw do
-  resources :testes
-
   resources :contacts
   match 'contact_us' => 'contacts#new', :as => 'contact_us'
   # The priority is based upon order of creation:

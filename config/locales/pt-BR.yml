@@ -17,6 +17,9 @@ pt-BR:
     opt_in: Desejo receber informações por e-mail
     send: Enviar
     make_contact: Entre em contato
+  messages:
+    contacts:
+      notice: 'Seu contato foi recebido. Em breve responderemos sua mensagem. Obrigado!'
   date:
     abbr_day_names:
     - Dom
