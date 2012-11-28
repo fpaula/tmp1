@@ -3,7 +3,7 @@
     <%= notice %>
   </div>
 <% end %>
-<%= form_for(@contact, :html => { :class => "edit_post"}) do |f| %>
+<%= form_for(@contact, :url => contact_us_path, :html => { :class => "edit_post"}) do |f| %>
   <% if @contact.errors.any? %>
     <div class="alert alert-error">
       <% @contact.errors.full_messages.each do |msg| %>
